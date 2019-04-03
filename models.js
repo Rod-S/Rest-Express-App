@@ -1,4 +1,4 @@
-'use strcit';
+'use strict';
 
 var mongoose = require('mongoose');
 
@@ -35,7 +35,7 @@ AnswerSchema.method("vote", function(vote, callback){
   this.parent().save(callback);
 });
 
-var QuestionSchema = new Schema ({
+var QuestionSchema = new Schema({
   text: String,
   createdAt: {type: Date, default: Date.now},
   answers: [AnswerSchema]
